@@ -1,0 +1,39 @@
+.carousel-item img {
+    width: 100%;       
+    height: 500px;    
+    object-fit: cover; 
+  }
+#carouselExampleIndicators{ /*Div Principal que engloba o carrosel e botoes...*/
+    margin-bottom: 35px;
+}
+.tituloCarrosel{
+    color: aliceblue;
+    background-color: rgb(13, 5, 20, 0.5);
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+.paragrafoCarrosel{
+    color: aliceblue;
+    background-color: rgb(13, 5, 20, 0.5);
+    position: absolute;
+    top: 200px;
+    left: 100px;
+}
+#botaoCarroselVoltar{
+    width: 50px;
+    height: 100px;
+    align-self: center;
+    position: absolute;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+#botaoCarroselProximo{
+    width: 50px;
+    height: 100px;
+    align-self: center;
+    position: absolute;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+  

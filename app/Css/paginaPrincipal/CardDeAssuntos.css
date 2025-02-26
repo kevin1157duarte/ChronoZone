@@ -1,0 +1,17 @@
+.CardDeAssuntos{
+    height: 75px;
+    background-color: aliceblue;
+    border: 5px solid;
+    border-radius: 10px;
+    border-color: rgb(35, 35, 238);
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px;
+}
+.CardDeAssuntos div{
+    align-content: center;
+    justify-items: center;
+}
+.CardDeAssuntos p{
+    margin: -5px;
+}
