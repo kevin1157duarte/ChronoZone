@@ -2,253 +2,273 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="Css/paginaPrincipal/carrosel.css">
-    <link rel="stylesheet" href="Css/paginaPrincipal/menuLateral.css">
-    <link rel="stylesheet" href="Css/paginaPrincipal/CardDeAssuntos.css">
-    <title>Fandom</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="Css/paginaPrincipal/carrosel.css">
+  <link rel="stylesheet" href="Css/paginaPrincipal/menuLateral.css">
+  <link rel="stylesheet" href="Css/paginaPrincipal/CardDeAssuntos.css">
+  <link rel="stylesheet" href="Css/paginaPrincipal/barraDeNavegacao.css">
+  <link rel="stylesheet" href="Css/paginaPrincipal/modal.css">
+  <title>Fandom</title>
 </head>
 
 <body>
+  <div class="container-fluid">
+    <nav id="barraDeBusca" class="navbar navbar-light bg-light"> <!--Configuração da Barra de Navegação-->
+      <a class="navbar-brand">ChronoZone</a>
+      <form class="form-inline mx-auto">
+        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar!</button>
+      </form>
+      <button id="btnAdicionar" type="button" class="btn btn-outline-dark">+</button>
+      <button id="btnPerfil">
+        <img src="Imagens/felipe.jpg" alt="">
+      </button>
+    </nav>
+    <dialog>
+      <img id="kkkk" src="Imagens/kkkk.jpg" alt="">
+      <h1>Teste</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, perferendis?</p>
+      <button id="btnVoltar">Voltar</button>
+    </dialog>
+
     <div class="container-fluid">
-        <nav class="navbar navbar-light bg-light"> <!--Configuração da Barra de Navegação-->
-            <a class="navbar-brand">Fandom</a>
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar!</button>
-            </form>
-        </nav>
+      <div class="row">
 
-        <div class="container-fluid">
-            <div class="row">
-
-                <div class="col-3" style="background-color: rgb(234, 0, 255); height: 94vh;"> <!-- Menu Lateral-->
-                    <div class="container-fluid" style="background-color: rgb(154, 247, 185);">
-                        <div id="CabecalhoMenuLatela" class="row"> <!--Imagen Menu Lateral-->
-                            <h1>ChronoZone</h1>
-                            <img id="imgCabecalho" src="" alt="">
-                        </div>
-                        <div class="row"><!--Menu Rapido-->
-                            <div class="accordion" id="accordionExample" style="width: 500px;">
-                                <div class="card">
-                                  <div class="card-header" id="headingOne">
-                                    <h5 class="mb-0">
-                                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Filmes
-                                      </button>
-                                    </h5>
-                                  </div>
-                                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                      <a href="">Lançamentos<br></a>
-                                      <a href="">Dublado<br></a>
-                                      <a href="">Legendado<br></a>
-                                      <a href="">Genero<br></a>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="card">
-                                  <div class="card-header" id="headingTwo">
-                                    <h5 class="mb-0">
-                                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Series
-                                      </button>
-                                    </h5>
-                                  </div>
-                                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <a href="">Lançamentos da Temporada<br></a>
-                                        <a href="">Top 10 da Semana<br></a>
-                                        <a href="">Temporadas<br></a>
-                                        <a href="">Em Lançamento<br></a>
-                                        <a href="">Dublado<br></a>
-                                        <a href="">Legendado<br></a>
-                                        <a href="">Genero<br></a>
-                                        <a href="">Calendario<br></a>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="card">
-                                  <div class="card-header" id="headingThree">
-                                    <h5 class="mb-0">
-                                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Animes
-                                      </button>
-                                    </h5>
-                                  </div>
-                                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <a href="">Animes da Temporada<br></a>
-                                        <a href="">Top 10 da Semana<br></a>
-                                        <a href="">Temporadas<br></a>
-                                        <a href="">Dublado<br></a>
-                                        <a href="">Legendado<br></a>
-                                        <a href="">Genero<br></a>
-                                        <a href="">Calendario<br></a> 
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingFour">
-                                      <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                          Jogos
-                                        </button>
-                                      </h5>
-                                    </div>
-                                
-                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                                      <div class="card-body">
-                                        <a href="">Em Lançamentos<br></a>
-                                        <a href="">Exclusivos de Console<br></a>
-                                        <a href="">Exclusivos de PC<br></a>
-                                        <a href="">Indie</a> 
-                                        <a href="">Jogos Gratuitos<br></a>
-                                        <a href="">Jogos em Promoção<br></a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="card">
-                                    <div class="card-header" id="headingFive">
-                                      <h5 class="mb-0">
-                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                          E-Sporte
-                                        </button>
-                                      </h5>
-                                    </div>
-                                
-                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-                                      <div class="card-body">
-                                        <a href="">Jogos da Semana<br></a>
-                                        <a href="">Noticias<br></a>
-                                        <a href="">Eventos<br></a>
-                                        <a href="">Campeonatos<br></a>
-                                      </div>
-                                    </div>
-                                  </div>
-                              </div>
-                        </div>
-                        <div>
-                          <a id="botaoSobreSite" href="" class="btn btn-outline-info">Sobre o Site</a><!--Botao sobre o site...-->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-9" style="background-color: rgb(255, 238, 0); height: 94vh;"> <!-- Conteudo Principal-->
-                    
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"> <!--Configuração do carrosel-->
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img class="d-block w-100" src="Imagens/1337465.png" alt="Primeiro Slide">
-                                <h2 class="tituloCarrosel">Teste do H2 IMG 1</h2>
-                                <div class="paragrafoCarrosel">
-                                    <p>Teste dos Paragrafos... <q></q></p>
-                                    <p>----------</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="Imagens/704387.png" alt="Segundo Slide">
-                                <h2 class="tituloCarrosel">Teste do H2 IMG 2</h2>
-                                <div class="paragrafoCarrosel">
-                                    <p>Teste dos Paragrafos...</p>
-                                    <p>----------</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="Imagens/911401.jpg" alt="Terceiro Slide">
-                                <h2 class="tituloCarrosel">Teste do H2 IMG 3</h2>
-                                <div class="paragrafoCarrosel">
-                                    <p>Teste dos Paragrafos...</p>
-                                    <p>----------</p>
-                                </div>
-                            </div>
-                        </div>
-                        <a id="botaoCarroselVoltar" class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                            data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Anterior</span>
-                        </a>
-                        <a id="botaoCarroselProximo" class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                            data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Próximo</span>
-                        </a>
-                    </div>
-                    <div class="CardDeAssuntos d-flex justify-content-around"> <!--Card de assuntos 1 -->
-                      <div class="col 4">
-                        <p>Lançamentos</p>
-                      </div>
-                      <div class="col 4">
-                        <p>15</p>
-                        <p>Respostas</p>
-                      </div>
-                      <div class="col 4">
-                        <p>Ultima mensagem por: </p>
-                        <p>Data: </p>
-                      </div>
-                    </div>
-                    <div class="CardDeAssuntos d-flex justify-content-around"> <!--Card de assuntos 2-->
-                      <div class="col 4">
-                        <p>Dublado</p>
-                      </div>
-                      <div class="col 4">
-                        <p>15</p>
-                        <p>Respostas</p>
-                      </div>
-                      <div class="col 4">
-                        <p>Ultima mensagem por: </p>
-                        <p>Data: </p>
-                      </div>
-                    </div>
-                    <div class="CardDeAssuntos d-flex justify-content-around"> <!--Card de assuntos 3-->
-                      <div class="col 4">
-                        <p>Legendado</p>
-                      </div>
-                      <div class="col 4">
-                        <p>15</p>
-                        <p>Respostas</p>
-                      </div>
-                      <div class="col 4">
-                        <p>Ultima mensagem por: </p>
-                        <p>Data: </p>
-                      </div>
-                    </div>
-                    <div class="CardDeAssuntos d-flex justify-content-around"> <!--Card de assuntos 4-->
-                      <div class="col 4">
-                        <p>Genero</p>
-                      </div>
-                      <div class="col 4">
-                        <p>15</p>
-                        <p>Respostas</p>
-                      </div>
-                      <div class="col 4">
-                        <p>Ultima mensagem por: </p>
-                        <p>Data: </p>
-                      </div>
-                    </div>
-                </div>
+        <div class="col-3" style="background-color: rgb(234, 0, 255); height: 94vh;"> <!-- Menu Lateral-->
+          <div class="container-fluid" style="background-color: rgb(154, 247, 185);">
+            <div id="CabecalhoMenuLatela" class="row"> <!--Imagen Menu Lateral-->
+              <img id="imgCabecalho" src="Imagens/ChronoZoneIMG.jpg" alt="">
             </div>
+            <div class="row"><!--Menu Rapido-->
+              <div class="accordion" id="accordionExample" style="width: 500px;">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                        Filmes
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                    data-parent="#accordionExample">
+                    <div class="card-body">
+                      <a href="">Lançamentos<br></a>
+                      <a href="">Dublado<br></a>
+                      <a href="">Legendado<br></a>
+                      <a href="">Genero<br></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Series
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                      <a href="">Lançamentos da Temporada<br></a>
+                      <a href="">Top 10 da Semana<br></a>
+                      <a href="">Temporadas<br></a>
+                      <a href="">Em Lançamento<br></a>
+                      <a href="">Dublado<br></a>
+                      <a href="">Legendado<br></a>
+                      <a href="">Genero<br></a>
+                      <a href="">Calendario<br></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Animes
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                    data-parent="#accordionExample">
+                    <div class="card-body">
+                      <a href="">Animes da Temporada<br></a>
+                      <a href="">Top 10 da Semana<br></a>
+                      <a href="">Temporadas<br></a>
+                      <a href="">Dublado<br></a>
+                      <a href="">Legendado<br></a>
+                      <a href="">Genero<br></a>
+                      <a href="">Calendario<br></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Jogos
+                      </button>
+                    </h5>
+                  </div>
+
+                  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                      <a href="">Em Lançamentos<br></a>
+                      <a href="">Exclusivos de Console<br></a>
+                      <a href="">Exclusivos de PC<br></a>
+                      <a href="">Indie</a>
+                      <a href="">Jogos Gratuitos<br></a>
+                      <a href="">Jogos em Promoção<br></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive"
+                        aria-expanded="false" aria-controls="collapseFive">
+                        E-Sporte
+                      </button>
+                    </h5>
+                  </div>
+
+                  <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                    <div class="card-body">
+                      <a href="">Jogos da Semana<br></a>
+                      <a href="">Noticias<br></a>
+                      <a href="">Eventos<br></a>
+                      <a href="">Campeonatos<br></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a id="botaoSobreSite" href="" class="btn btn-outline-info">Sobre o Site</a><!--Botao sobre o site...-->
+            </div>
+          </div>
         </div>
 
+        <div class="col-9" style="background-color: rgb(255, 238, 0); height: 94vh;"> <!-- Conteudo Principal-->
+
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <!--Configuração do carrosel-->
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="Imagens/1337465.png" alt="Primeiro Slide">
+                <h2 class="tituloCarrosel">Teste do H2 IMG 1</h2>
+                <div class="paragrafoCarrosel">
+                  <p>Teste dos Paragrafos... <q></q></p>
+                  <p>----------</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="Imagens/704387.png" alt="Segundo Slide">
+                <h2 class="tituloCarrosel">Teste do H2 IMG 2</h2>
+                <div class="paragrafoCarrosel">
+                  <p>Teste dos Paragrafos...</p>
+                  <p>----------</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="Imagens/911401.jpg" alt="Terceiro Slide">
+                <h2 class="tituloCarrosel">Teste do H2 IMG 3</h2>
+                <div class="paragrafoCarrosel">
+                  <p>Teste dos Paragrafos...</p>
+                  <p>----------</p>
+                </div>
+              </div>
+            </div>
+            <a id="botaoCarroselVoltar" class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+              data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a id="botaoCarroselProximo" class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+              data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Próximo</span>
+            </a>
+          </div>
+          <div class="CardDeAssuntos d-flex justify-content-around"> <!--Card de assuntos 1 -->
+            <div class="col 4">
+              <p>Lançamentos</p>
+            </div>
+            <div class="col 4">
+              <p>15</p>
+              <p>Respostas</p>
+            </div>
+            <div class="col 4">
+              <p>Ultima mensagem por: </p>
+              <p>Data: </p>
+            </div>
+          </div>
+          <div class="CardDeAssuntos d-flex justify-content-around"> <!--Card de assuntos 2-->
+            <div class="col 4">
+              <p>Dublado</p>
+            </div>
+            <div class="col 4">
+              <p>15</p>
+              <p>Respostas</p>
+            </div>
+            <div class="col 4">
+              <p>Ultima mensagem por: </p>
+              <p>Data: </p>
+            </div>
+          </div>
+          <div class="CardDeAssuntos d-flex justify-content-around"> <!--Card de assuntos 3-->
+            <div class="col 4">
+              <p>Legendado</p>
+            </div>
+            <div class="col 4">
+              <p>15</p>
+              <p>Respostas</p>
+            </div>
+            <div class="col 4">
+              <p>Ultima mensagem por: </p>
+              <p>Data: </p>
+            </div>
+          </div>
+          <div class="CardDeAssuntos d-flex justify-content-around"> <!--Card de assuntos 4-->
+            <div class="col 4">
+              <p>Genero</p>
+            </div>
+            <div class="col 4">
+              <p>15</p>
+              <p>Respostas</p>
+            </div>
+            <div class="col 4">
+              <p>Ultima mensagem por: </p>
+              <p>Data: </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="Js/cardPerfil.js"></script>
 </body>
 
 </html>
