@@ -9,15 +9,17 @@
     background-color: black;
 }
 #btnAdicionar {
-    position: relative;
     top: -3px;
     margin-right: 10px;
-    justify-content: center; 
-    align-items: center; 
-    font-size: 35px; 
+    font-size: 30px; 
     font-weight: bold;
     line-height: 30px; 
-    border: 0px;
+    border: none;
+    outline: none;
+}
+#btnAdicionar:hover, #btnAdicionar:focus {
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.678);
 }
 #btnPerfil{
     border: 0px;
