@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="Css/paginaPrincipal/menuLateral.css">
   <link rel="stylesheet" href="Css/paginaPrincipal/CardDeAssuntos.css">
   <link rel="stylesheet" href="Css/paginaPrincipal/barraDeNavegacao.css">
-  <link rel="stylesheet" href="Css/paginaPrincipal/modal.css">
+  <link rel="stylesheet" href="Css/paginaPrincipal/modalPerfil.css">
+  <link rel="stylesheet" href="Css/paginaPrincipal/modalPost.css">
   <title>Fandom</title>
 </head>
 
@@ -22,12 +23,15 @@
         <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar!</button>
       </form>
-      <button id="btnAdicionar" type="button">+</button>
+
+      <button id="btnAdicionarPost" type="button">+</button>
+
       <button id="btnPerfil">
         <img src="Imagens/felipe.jpg" alt="">
       </button>
     </nav>
-    <dialog id="modalPerfil">
+
+    <dialog id="modalPerfil"> <!--Modal Perfil-->
       <img id="kkkk" src="Imagens/kkkk.jpg" alt="">
       <h2>Filipe Angelo</h2>
       <p>filipe.A123@gmail.com</p>
@@ -35,6 +39,20 @@
       <button class="btnPerfil">Configuração</button>
       <button class="btnPerfil">Editar Perfil</button>
       <button id="btnVoltar">Voltar</button>
+    </dialog>
+
+    <dialog id="modalPost"> <!--Modal Post-->
+      <div id="inputPost">
+        <input id="inpTitulo" type="text" placeholder="Titulo do post">
+        <textarea id="inpAssunto" placeholder="Escreva sua postagem aqui..."></textarea>
+
+        <button id="btnAnexar">Anexar imagens</button>
+      </div>
+      <div id="buttonsContainer">
+        <button id="btnCancelarPost">Cancelar</button>
+        <button id="btnCriarPost">Criar</button>
+    </div>
+    
     </dialog>
 
     <div class="container-fluid">
@@ -272,6 +290,7 @@
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
   <script src="Js/cardPerfil.js"></script>
+  <script src="Js/modalPost.js"></script>
 </body>
 
 </html>
