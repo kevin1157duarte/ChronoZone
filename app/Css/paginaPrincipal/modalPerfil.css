@@ -1,6 +1,7 @@
 #modalPerfil{
   text-align: center;
   display: grid;
+  z-index: 1;
 }
 button:focus{
   outline: none;

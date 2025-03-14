@@ -3,9 +3,9 @@ const btnCancelarPost = document.querySelector("#btnCancelarPost")
 const modalPostagem = document.querySelector("#modalPost")   
 
 btnAdicionarPost.onclick = function(){
-    modalPostagem.showModal()  
+    modalPostagem.classList.remove('d-none')
 
 }
 btnCancelarPost.onclick = function(){
-    modalPostagem.close()
+    modalPostagem.classList.add('d-none')
 }

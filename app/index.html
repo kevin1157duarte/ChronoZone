@@ -12,26 +12,32 @@
   <link rel="stylesheet" href="Css/paginaPrincipal/barraDeNavegacao.css">
   <link rel="stylesheet" href="Css/paginaPrincipal/modalPerfil.css">
   <link rel="stylesheet" href="Css/paginaPrincipal/modalPost.css">
+  <link rel="stylesheet" href="Css/paginaPrincipal/paginaPrincipal.css">
   <title>Fandom</title>
 </head>
 
 <body>
-  <div class="container-fluid" style="">
+  <section class="container-fluid" id="sectionPrincipal"><!--Seção Principal-->
+
+    <!------------------------------------------------------------
+                      Barra de Navegação
+    ------------------------------------------------------------>
     <nav id="barraDeBusca" class="navbar navbar-light bg-light"> <!--Configuração da Barra de Navegação-->
       <a class="navbar-brand">ChronoZone</a>
       <form class="form-inline mx-auto">
         <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar!</button>
       </form>
-
       <button id="btnAdicionarPost" type="button">+</button>
-
       <button id="btnPerfil">
         <img src="Imagens/felipe.jpg" alt="">
       </button>
     </nav>
 
-    <dialog id="modalPerfil" class="disble"> <!--Modal Perfil-->
+    <!------------------------------------------------------------
+                      Modal Perfil / modalPost
+    ------------------------------------------------------------>
+    <dialog class="d-none" id="modalPerfil"> <!--Modal Perfil-->
       <img id="kkkk" src="Imagens/kkkk.jpg" alt="">
       <h2>Filipe Angelo</h2>
       <p>filipe.A123@gmail.com</p>
@@ -41,25 +47,22 @@
       <button id="btnVoltar">Voltar</button>
     </dialog>
 
-    <dialog id="modalPost"> <!--Modal Post-->
+    <dialog class="d-none" id="modalPost"> <!--Modal Post-->
       <div id="inputPost">
         <input id="inpTitulo" type="text" placeholder="Titulo do post">
         <textarea id="inpAssunto" placeholder="Escreva sua postagem aqui..."></textarea>
-
         <button id="btnAnexar">Anexar imagens</button>
       </div>
       <div id="buttonsContainer">
         <button id="btnCancelarPost">Cancelar</button>
         <button id="btnCriarPost">Criar</button>
-    </div>
-    
+      </div>
     </dialog>
 
-    <div class="container-fluid">
+    
       <div class="row">
-
-        <div class="col-3" > <!-- Menu Lateral-->
-          <div class="container-fluid" >
+        <div class="col-3"> <!-- Menu Lateral-->
+          <div class="container-fluid">
             <div id="CabecalhoMenuLatela" class="row"> <!--Imagen Menu Lateral-->
               <img id="imgCabecalho" src="Imagens/ChronoZoneIMG.jpg" alt="">
             </div>
@@ -275,10 +278,8 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
-
-  </div>
+  </section>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

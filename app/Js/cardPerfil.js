@@ -3,8 +3,9 @@ const btnVoltar = document.querySelector("#btnVoltar")
 const modal = document.querySelector("#modalPerfil")   
 
 btn.onclick = function(){
-    modal.showModal()  
+    modal.classList.remove('d-none')
+    
 }
 btnVoltar.onclick = function(){
-    modal.close()
+    modal.classList.add('d-none')
 }

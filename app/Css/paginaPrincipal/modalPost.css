@@ -5,6 +5,7 @@
     flex-direction: column; 
     justify-content: space-between; 
     border-radius: 15px;
+    z-index: 1;
 }
 
 #inputPost {
