@@ -1,5 +1,30 @@
-#sectionPrincipal{
+body{
     background-color: rgb(216, 206, 192);
-    height: 100vh;
-    padding: 0px;
 }
+#barraDeBusca input{
+    width: 500px;
+}
+#barraDeBusca img{
+    width: 45px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: contain;
+    background-color: black;
+}
+#btnAdicionarPost {
+    top: -3px;
+    margin-right: 10px;
+    font-size: 30px; 
+    font-weight: bold;
+    line-height: 30px; 
+    border: none;
+    outline: none;
+}
+#btnAdicionarPost:hover, #btnAdicionarPost:focus {
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.678);
+}
+#btnPerfil{
+    border: 0px;
+} 
+

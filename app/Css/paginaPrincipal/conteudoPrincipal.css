@@ -1,0 +1,116 @@
+/*-------------------------- 
+        Confg. Carosel 
+----------------------------*/
+.carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+#carouselExampleIndicators {
+    /*Div Principal que engloba o carrosel e botoes...*/
+    margin-bottom: 25px;
+}
+
+.tituloCarrosel {
+    color: aliceblue;
+    background-color: rgb(13, 5, 20, 0.5);
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+.paragrafoCarrosel {
+    color: aliceblue;
+    background-color: rgb(13, 5, 20, 0.5);
+    position: absolute;
+    top: 200px;
+    left: 100px;
+}
+
+#botaoCarroselVoltar {
+    width: 50px;
+    height: 100px;
+    align-self: center;
+    position: absolute;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+#botaoCarroselProximo {
+    width: 50px;
+    height: 100px;
+    align-self: center;
+    position: absolute;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+/*-------------------------- 
+    Area de comentario / recomendaçoes 
+----------------------------*/
+
+#areaDeNovidades {
+    h4{
+        border-bottom: 1px solid black;
+        text-align: center;
+        align-content: center;
+        margin: 10px;
+        padding-bottom: 10px;
+    }
+    h5{
+        margin: 1px;
+    }
+    p{
+        font-size: 10pt;
+        margin: 1px;
+    }
+}
+
+/*-------------------------- 
+    Comentarios da Semana 
+----------------------------*/
+#comentariosSemanais {
+    background-color: aliceblue;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.post{
+    display: flex;
+    margin: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.divImg{
+    margin-right: 15px;
+}
+
+.imgPerfil{
+    align-content: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 25px;
+    object-fit: contain;
+    background-color: black;
+}
+
+/*-------------------------- 
+    Comunidade Recomendadas
+----------------------------*/
+#comunidadeRecomendadas {
+    background-color: aliceblue;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 0px;
+    padding-bottom: 15px;
+}
+.hashtag{
+    color: blue;
+}
+#tituloHashtag{
+    font-size: 15pt;
+    text-align: center;
+}

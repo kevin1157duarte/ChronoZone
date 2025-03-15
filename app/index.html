@@ -6,279 +6,319 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="Css/paginaPrincipal/carrosel.css">
   <link rel="stylesheet" href="Css/paginaPrincipal/menuLateral.css">
-  <link rel="stylesheet" href="Css/paginaPrincipal/CardDeAssuntos.css">
-  <link rel="stylesheet" href="Css/paginaPrincipal/barraDeNavegacao.css">
-  <link rel="stylesheet" href="Css/paginaPrincipal/modalPerfil.css">
-  <link rel="stylesheet" href="Css/paginaPrincipal/modalPost.css">
+  <link rel="stylesheet" href="Css/paginaPrincipal/conteudoPrincipal.css">
+  <link rel="stylesheet" href="Css/paginaPrincipal/modal.css">
   <link rel="stylesheet" href="Css/paginaPrincipal/paginaPrincipal.css">
   <title>Fandom</title>
 </head>
 
 <body>
-  <section class="container-fluid" id="sectionPrincipal"><!--Seção Principal-->
-
-    <!------------------------------------------------------------
+  <!------------------------------------------------------------
                       Barra de Navegação
     ------------------------------------------------------------>
-    <nav id="barraDeBusca" class="navbar navbar-light bg-light"> <!--Configuração da Barra de Navegação-->
-      <a class="navbar-brand">ChronoZone</a>
-      <form class="form-inline mx-auto">
-        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar!</button>
-      </form>
-      <button id="btnAdicionarPost" type="button">+</button>
-      <button id="btnPerfil">
-        <img src="Imagens/felipe.jpg" alt="">
-      </button>
-    </nav>
+  <nav id="barraDeBusca" class="navbar navbar-light bg-light"> <!--Configuração da Barra de Navegação-->
+    <a class="navbar-brand">ChronoZone</a>
+    <form class="form-inline mx-auto">
+      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar!</button>
+    </form>
+    <button id="btnAdicionarPost" type="button">+</button>
+    <button id="btnPerfil">
+      <img src="Imagens/felipe.jpg" alt="">
+    </button>
+  </nav>
 
-    <!------------------------------------------------------------
+  <!------------------------------------------------------------
                       Modal Perfil / modalPost
     ------------------------------------------------------------>
-    <dialog class="d-none" id="modalPerfil"> <!--Modal Perfil-->
-      <img id="kkkk" src="Imagens/kkkk.jpg" alt="">
-      <h2>Filipe Angelo</h2>
-      <p>filipe.A123@gmail.com</p>
-      <button class="btnPerfil">Suporte</button>
-      <button class="btnPerfil">Configuração</button>
-      <button class="btnPerfil">Editar Perfil</button>
-      <button id="btnVoltar">Voltar</button>
-    </dialog>
-
-    <dialog class="d-none" id="modalPost"> <!--Modal Post-->
-      <div id="inputPost">
-        <input id="inpTitulo" type="text" placeholder="Titulo do post">
-        <textarea id="inpAssunto" placeholder="Escreva sua postagem aqui..."></textarea>
-        <button id="btnAnexar">Anexar imagens</button>
-      </div>
-      <div id="buttonsContainer">
-        <button id="btnCancelarPost">Cancelar</button>
-        <button id="btnCriarPost">Criar</button>
-      </div>
-    </dialog>
-
-    
-      <div class="row">
-        <div class="col-3"> <!-- Menu Lateral-->
-          <div class="container-fluid">
-            <div id="CabecalhoMenuLatela" class="row"> <!--Imagen Menu Lateral-->
-              <img id="imgCabecalho" src="Imagens/ChronoZoneIMG.jpg" alt="">
-            </div>
-            <div class="row"><!--Menu Rapido-->
-              <div class="accordion" id="accordionExample" style="width: 500px;">
-                <div class="card">
-                  <div class="card-header" id="headingOne">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                        aria-expanded="true" aria-controls="collapseOne">
-                        Filmes
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                    data-parent="#accordionExample">
-                    <div class="card-body">
-                      <a href="">Lançamentos<br></a>
-                      <a href="">Dublado<br></a>
-                      <a href="">Legendado<br></a>
-                      <a href="">Genero<br></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header" id="headingTwo">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Series
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body">
-                      <a href="">Lançamentos da Temporada<br></a>
-                      <a href="">Top 10 da Semana<br></a>
-                      <a href="">Temporadas<br></a>
-                      <a href="">Em Lançamento<br></a>
-                      <a href="">Dublado<br></a>
-                      <a href="">Legendado<br></a>
-                      <a href="">Genero<br></a>
-                      <a href="">Calendario<br></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header" id="headingThree">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Animes
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                    data-parent="#accordionExample">
-                    <div class="card-body">
-                      <a href="">Animes da Temporada<br></a>
-                      <a href="">Top 10 da Semana<br></a>
-                      <a href="">Temporadas<br></a>
-                      <a href="">Dublado<br></a>
-                      <a href="">Legendado<br></a>
-                      <a href="">Genero<br></a>
-                      <a href="">Calendario<br></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header" id="headingFour">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Jogos
-                      </button>
-                    </h5>
-                  </div>
-
-                  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                    <div class="card-body">
-                      <a href="">Em Lançamentos<br></a>
-                      <a href="">Exclusivos de Console<br></a>
-                      <a href="">Exclusivos de PC<br></a>
-                      <a href="">Indie</a>
-                      <a href="">Jogos Gratuitos<br></a>
-                      <a href="">Jogos em Promoção<br></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header" id="headingFive">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive"
-                        aria-expanded="false" aria-controls="collapseFive">
-                        E-Sporte
-                      </button>
-                    </h5>
-                  </div>
-
-                  <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-                    <div class="card-body">
-                      <a href="">Jogos da Semana<br></a>
-                      <a href="">Noticias<br></a>
-                      <a href="">Eventos<br></a>
-                      <a href="">Campeonatos<br></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <a id="botaoSobreSite" href="" class="btn btn-outline-info">Sobre o Site</a><!--Botao sobre o site...-->
-            </div>
-          </div>
-        </div>
-
-        <div class="col-9"> <!-- Conteudo Principal-->
-
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <!--Configuração do carrosel-->
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="Imagens/1337465.png" alt="Primeiro Slide">
-                <h2 class="tituloCarrosel">Teste do H2 IMG 1</h2>
-                <div class="paragrafoCarrosel">
-                  <p>Teste dos Paragrafos... <q></q></p>
-                  <p>----------</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="Imagens/704387.png" alt="Segundo Slide">
-                <h2 class="tituloCarrosel">Teste do H2 IMG 2</h2>
-                <div class="paragrafoCarrosel">
-                  <p>Teste dos Paragrafos...</p>
-                  <p>----------</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="Imagens/911401.jpg" alt="Terceiro Slide">
-                <h2 class="tituloCarrosel">Teste do H2 IMG 3</h2>
-                <div class="paragrafoCarrosel">
-                  <p>Teste dos Paragrafos...</p>
-                  <p>----------</p>
-                </div>
-              </div>
-            </div>
-            <a id="botaoCarroselVoltar" class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-              data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Anterior</span>
-            </a>
-            <a id="botaoCarroselProximo" class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-              data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Próximo</span>
-            </a>
-          </div>
-          <div class="CardDeAssuntos d-flex justify-content-around"> <!--Card de assuntos 1 -->
-            <div class="col 4">
-              <p>Lançamentos</p>
-            </div>
-            <div class="col 4">
-              <p>15</p>
-              <p>Respostas</p>
-            </div>
-            <div class="col 4">
-              <p>Ultima mensagem por: </p>
-              <p>Data: </p>
-            </div>
-          </div>
-          <div class="CardDeAssuntos d-flex justify-content-around"> <!--Card de assuntos 2-->
-            <div class="col 4">
-              <p>Dublado</p>
-            </div>
-            <div class="col 4">
-              <p>15</p>
-              <p>Respostas</p>
-            </div>
-            <div class="col 4">
-              <p>Ultima mensagem por: </p>
-              <p>Data: </p>
-            </div>
-          </div>
-          <div class="CardDeAssuntos d-flex justify-content-around"> <!--Card de assuntos 3-->
-            <div class="col 4">
-              <p>Legendado</p>
-            </div>
-            <div class="col 4">
-              <p>15</p>
-              <p>Respostas</p>
-            </div>
-            <div class="col 4">
-              <p>Ultima mensagem por: </p>
-              <p>Data: </p>
-            </div>
-          </div>
-          <div class="CardDeAssuntos d-flex justify-content-around"> <!--Card de assuntos 4-->
-            <div class="col 4">
-              <p>Genero</p>
-            </div>
-            <div class="col 4">
-              <p>15</p>
-              <p>Respostas</p>
-            </div>
-            <div class="col 4">
-              <p>Ultima mensagem por: </p>
-              <p>Data: </p>
-            </div>
-          </div>
-        </div>
+  <dialog class="d-none" id="modalPerfil"> <!--Modal Perfil-->
+    <img id="kkkk" src="Imagens/kkkk.jpg" alt="">
+    <h2>Filipe Angelo</h2>
+    <p>filipe.A123@gmail.com</p>
+    <button class="btnPerfil">Suporte</button>
+    <button class="btnPerfil">Configuração</button>
+    <button class="btnPerfil">Editar Perfil</button>
+    <button id="btnVoltar">Voltar</button>
+  </dialog>
+  <dialog class="d-none" id="modalPost"> <!--Modal Post-->
+    <div id="inputPost">
+      <input id="inpTitulo" type="text" placeholder="Titulo do post">
+      <textarea id="inpAssunto" placeholder="Escreva sua postagem aqui..."></textarea>
+      <button id="btnAnexar">Anexar imagens</button>
     </div>
+    <div id="buttonsContainer">
+      <button id="btnCancelarPost">Cancelar</button>
+      <button id="btnCriarPost">Criar</button>
+    </div>
+  </dialog>
+
+    <!------------------------------------------------------------
+                      Seção Principal
+    ------------------------------------------------------------>
+  <section class="container-fluid" id="sectionPrincipal">
+    <div class="row">
+
+      <!------------------------------------------------------------
+                          Menu Lateral
+      ------------------------------------------------------------>
+      <aside class="col-2" id="menuLateral"> <!-- Menu Lateral-->
+        <div class="container-fluid">
+          <div id="CabecalhoMenuLatela" class="row">
+            <img id="imgCabecalho" src="Imagens/ChronoZoneIMG.jpg" alt=""><!--Imagen Menu Lateral-->
+          </div>
+          <!--------------------------- Acordeon --------------------------------->
+          <div class="row">
+            <nav class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Filmes
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                  data-parent="#accordionExample">
+                  <div class="card-body">
+                    <a href="">Lançamentos<br></a>
+                    <a href="">Dublado<br></a>
+                    <a href="">Legendado<br></a>
+                    <a href="">Genero<br></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                      data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Series
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <a href="">Lançamentos da Temporada<br></a>
+                    <a href="">Top 10 da Semana<br></a>
+                    <a href="">Temporadas<br></a>
+                    <a href="">Em Lançamento<br></a>
+                    <a href="">Dublado<br></a>
+                    <a href="">Legendado<br></a>
+                    <a href="">Genero<br></a>
+                    <a href="">Calendario<br></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                      data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Animes
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <a href="">Animes da Temporada<br></a>
+                    <a href="">Top 10 da Semana<br></a>
+                    <a href="">Temporadas<br></a>
+                    <a href="">Dublado<br></a>
+                    <a href="">Legendado<br></a>
+                    <a href="">Genero<br></a>
+                    <a href="">Calendario<br></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                      data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      Jogos
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <a href="">Em Lançamentos<br></a>
+                    <a href="">Exclusivos de Console<br></a>
+                    <a href="">Exclusivos de PC<br></a>
+                    <a href="">Indie</a>
+                    <a href="">Jogos Gratuitos<br></a>
+                    <a href="">Jogos em Promoção<br></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingFive">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive"
+                      aria-expanded="false" aria-controls="collapseFive">
+                      E-Sporte
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <a href="">Jogos da Semana<br></a>
+                    <a href="">Noticias<br></a>
+                    <a href="">Eventos<br></a>
+                    <a href="">Campeonatos<br></a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div>
+            <a id="botaoSobreSite" href="" class="btn btn-outline-info">Sobre o Site</a><!--Botao sobre o site...-->
+          </div>
+        </div>
+      </aside>
+
+      <!------------------------------------------------------------
+                          Conteudo Principal
+      ------------------------------------------------------------>
+      <main class="col-10">
+        <!--------------------------- Carrosel --------------------------------->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="Imagens/1337465.png" alt="Primeiro Slide">
+              <h2 class="tituloCarrosel">Teste do H2 IMG 1</h2>
+              <div class="paragrafoCarrosel">
+                <p>Teste dos Paragrafos... <q></q></p>
+                <p>----------</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="Imagens/704387.png" alt="Segundo Slide">
+              <h2 class="tituloCarrosel">Teste do H2 IMG 2</h2>
+              <div class="paragrafoCarrosel">
+                <p>Teste dos Paragrafos...</p>
+                <p>----------</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="Imagens/911401.jpg" alt="Terceiro Slide">
+              <h2 class="tituloCarrosel">Teste do H2 IMG 3</h2>
+              <div class="paragrafoCarrosel">
+                <p>Teste dos Paragrafos...</p>
+                <p>----------</p>
+              </div>
+            </div>
+          </div>
+          <a id="botaoCarroselVoltar" class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+            data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a id="botaoCarroselProximo" class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+            data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+          </a>
+        </div>
+
+        <div class="row" id="areaDeNovidades">
+          
+          <!--------------------------- COLUNA - Post da semana --------------------------------->
+          <article class="col-8" id="comentariosSemanais">
+            <h4>Post mais curtidos</h4>
+            <div class="post"> <!--------------------------- Post do Usuario --------------------------------->
+              <div class="divImg">
+                <img class="imgPerfil" src="Imagens/kkkk.jpg" alt="">
+              </div>
+              <div>
+                <h5>Nome...</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum laborum ipsa aliquid unde, cupiditate nam.</p>
+              </div>
+            </div>
+
+            <div class="post"> <!--------------------------- Post do Usuario --------------------------------->
+              <div class="divImg">
+                <img class="imgPerfil" src="Imagens/kkkk.jpg" alt="">
+              </div>
+              <div>
+                <h5>Nome...</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum laborum ipsa aliquid unde, cupiditate nam.</p>
+              </div>
+            </div>
+
+            <div class="post"> <!--------------------------- Post do Usuario --------------------------------->
+              <div class="divImg">
+                <img class="imgPerfil" src="Imagens/kkkk.jpg" alt="">
+              </div>
+              <div>
+                <h5>Nome...</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum laborum ipsa aliquid unde, cupiditate nam.</p>
+              </div>
+            </div>
+
+            <div class="post"> <!--------------------------- Post do Usuario --------------------------------->
+              <div class="divImg">
+                <img class="imgPerfil" src="Imagens/kkkk.jpg" alt="">
+              </div>
+              <div>
+                <h5>Nome...</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum laborum ipsa aliquid unde, cupiditate nam.</p>
+              </div>
+            </div>
+          </article>
+
+          <!--------------------------- COLUNA - Recomendações de Comunidade --------------------------------->
+          <article class="col-3" id="comunidadeRecomendadas">
+            <h4>Comunidades Recomendadas</h4>
+
+            <div class="post"> <!--------------------------- Comunidades Recomendadas --------------------------------->
+              <div class="divImg">
+                <img class="imgPerfil" src="Imagens/felipe.jpg" alt="">
+              </div>
+              <div>
+                <h5>Nome...</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, alias?</p>
+              </div>
+            </div>
+            
+            <div class="post"> <!--------------------------- Comunidades Recomendadas --------------------------------->
+              <div class="divImg">
+                <img class="imgPerfil" src="Imagens/felipe.jpg" alt="">
+              </div>
+              <div>
+                <h5>Nome...</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, alias?</p>
+              </div>
+            </div>
+            
+            <div class="post"> <!--------------------------- Comunidades Recomendadas --------------------------------->
+              <div class="divImg">
+                <img class="imgPerfil" src="Imagens/felipe.jpg" alt="">
+              </div>
+              <div>
+                <h5>Nome...</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, alias?</p>
+              </div>
+            </div>
+            
+            <h6 id="tituloHashtag">Hashtag mais curtido</h6>
+            <p class="hashtag">#Rainbow6</p>
+            <p class="hashtag">#OverWatch</p>
+            <p class="hashtag">#Sextou</p>
+            <p class="hashtag">#Round6</p>
+            
+          </article>
+        </div>
+
+      </main>
+    </div>
+
   </section>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
