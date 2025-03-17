@@ -1,7 +1,7 @@
 /*-------------------------- 
         modal do Perfil 
 ----------------------------*/
-#modalPerfil {
+.modalPerfil {
     text-align: center;
     display: grid;
     z-index: 1;
@@ -28,6 +28,12 @@ button:focus {
 .btnPerfil {
     margin: 5px;
     border-radius: 10px;
+}
+
+.inputUsuario{
+    margin-bottom: 10px;
+    border-radius: 15px;
+    padding-left: 10px;
 }
 
 /*-------------------------- 

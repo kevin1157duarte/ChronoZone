@@ -1,0 +1,51 @@
+/*-------------------------- 
+    Comunidade Recomendadas
+----------------------------*/
+#areaRecomendados{
+    height: 90Vh;
+    padding-top: 20px;
+    margin-top: 30px;
+    text-align: center;
+    justify-content: center;
+}
+#divRecomendados{
+    background-color: aliceblue;
+    text-align: start;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 25px;
+    border-radius: 15px;
+}
+
+.post{
+    display: flex;
+    margin-left: 10px;
+    padding-top: 5px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.divImg{
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.imgPerfil{
+    align-content: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 25px;
+    object-fit: contain;
+    background-color: rgb(0, 0, 0);
+}
+#divHashtag{
+    margin: 15px;
+}
+.hashtag{
+    color: blue;
+}
+#tituloHashtag{
+    font-size: 15pt;
+    text-align: center;
+}

@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(216, 206, 192);
+}
+
+/*-------------------------- 
+    Corpo da Tela Cadastro 
+----------------------------*/
+#corpoPrincipalCadastro{
+    background-color: aliceblue;
+    padding: 2%;
+    margin: auto;
+    margin-top: 10%;
+    width: 50%;
+}
+h1{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 25px;
+}
+input{
+    width: 300px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+button{
+    margin: 15px;
+}
