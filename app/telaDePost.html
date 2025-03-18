@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="Css/paginaDePost/paginaDePost.css">
-    <link rel="stylesheet" href="Css/paginaDePost/areaDePost.css">
-    <link rel="stylesheet" href="Css/paginaDePost/areaDeRecomendados.css">
+    <link rel="stylesheet" href="Css/paginaDoAssunto/paginaDePost.css">
+    <link rel="stylesheet" href="Css/paginaDoAssunto/areaDoAssunto.css">
+    <link rel="stylesheet" href="Css/paginaDoAssunto/areaDeRecomendados.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Fandom</title>
 </head>
 
@@ -192,118 +193,97 @@
                 </aside>
 
                 <!------------------------------------------------------------
-                                Conteudo Principal
-            ------------------------------------------------------------>
+                                Corpo Principal
+                ------------------------------------------------------------>
                 <main class="col-7">
-                    <h1>Teste de are de post</h1>
-                    <div class="container-fluid" id="divPost">
+                    <h1>Teste de area de post</h1>
+                    <div class="container-fluid" id="AreaDePostagem">
                         <div id="divBtn">
-                            <button type="button" class="btn btn-primary">Post</button>
-                            <button type="button" class="btn btn-secondary">Comunidade</button>
+                            <button type="button" class="btn btn-primary btnTroca" id="botao1">Post</button>
+                            <button type="button" class="btn btn-secondary btnTroca" id="botao2">Comunidade</button>
                         </div>
 
-                        <div class="post">
+                        <!------------------------------------------------------------
+                                        Area dos COMUNIDADE   
+                        ------------------------------------------------------------>
+                        <article class=" container-fluid" id="articleDaComunidade">
+                            <div class="row postComunidade">
+                                <!--------------------------- Post do Usuario --------------------------------->
+                                <div class="col-1 divImgComunidade">
+                                    <img class="imgPerfilComunidade" src="Imagens/kkkk.jpg" alt="">
+                                </div>
+                                <div class="col-9 divTxtComunidade">
+                                    <h5>Nome...</h5>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum laborum ipsa
+                                        aliquid
+                                        unde, cupiditate nam.</p>
+                                        <div class="divBtnInteracao">
+                                            10mil<img src="Imagens/imgLike.svg" class="BtnInteragir" alt="">
+                                            <button type="button" class="btn-outline-primary BtnInteragir">Curtir</button>
+                                            <button type="button" class="btn-outline-primary BtnInteragir">Compartilhar</button>
+                                            <button type="button" class="btn-outline-danger BtnInteragir">Denuciar</button>
+                                        </div>
+                                </div>
+                            </div>
+
+                            
+                        </article>
+
+                        <!------------------------------------------------------------
+                                        Area da POST
+                        ------------------------------------------------------------>
+                        <article class="d-none container-fluid" id="articleDePostagem">
                             <!--------------------------- Post do Usuario --------------------------------->
-                            <div class="divImg">
-                                <img class="imgPerfil" src="Imagens/kkkk.jpg" alt="">
+                            <div class="row postComunidade">
+                                <div class="col-3">
+                                    <iframe id="iframePost" src="https://www.youtube.com/embed/_Wt9iBO1glA"
+                                        title="Naruto 🍥 Lofi HipHop |best calm and relaxing Mix | Lofi Culture : Naruto"></iframe>
+                                </div>
+                                <div class="col-9">
+                                    <div class="divTxtPost">
+                                        <h5>Kevin Duarte</h5>
+                                        <p>Um dos melhores video para ouvir enquanto programa...</p>
+                                    </div>
+                                    
+                                    <div class="divBtnInteracao">
+                                        10mil<img src="Imagens/imgLike.svg" class="BtnInteragir" alt="">
+                                        <button type="button" class="btn-outline-primary BtnInteragir">Curtir</button>
+                                        <button type="button" class="btn-outline-primary BtnInteragir">Compartilhar</button>
+                                        <button type="button" class="btn-outline-danger BtnInteragir">Denuciar</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <h5>Nome...</h5>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum laborum ipsa aliquid
-                                    unde, cupiditate nam.</p>
-                            </div>
-                        </div>
 
-                        <div class="post">
                             <!--------------------------- Post do Usuario --------------------------------->
-                            <div class="divImg">
-                                <img class="imgPerfil" src="Imagens/kkkk.jpg" alt="">
+                            <div class="row postComunidade">
+                                <div class="col-3">
+                                    <video id="iframePost" controls>
+                                        <source src="video/Renan_Desesperado.mp4" type="video/mp4">
+                                        Seu navegador não suporta vídeos.
+                                    </video>
+                                    
+                                </div>
+                                <div class="col-9">
+                                    <div class="divTxtPost">
+                                        <h5>Kevin Duarte</h5>
+                                    <p>A cara de Medo do Renan...</p>
+                                    </div>
+                                    <div class="divBtnInteracao">
+                                        10mil<img src="Imagens/imgLike.svg" class="BtnInteragir" alt="">
+                                        <button type="button" class="btn-outline-primary BtnInteragir">Curtir</button>
+                                        <button type="button" class="btn-outline-primary BtnInteragir">Compartilhar</button>
+                                        <button type="button" class="btn-outline-danger BtnInteragir">Denuciar</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
 
-                                <h5>Nome...</h5>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum laborum ipsa aliquid
-                                    unde, cupiditate nam.</p>
-                            </div>
-                        </div>
-
-                        <div class="post">
-                            <!--------------------------- Post do Usuario --------------------------------->
-                            <div class="divImg">
-                                <img class="imgPerfil" src="Imagens/kkkk.jpg" alt="">
-                            </div>
-                            <div>
-                                <h5>Nome...</h5>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum laborum ipsa aliquid
-                                    unde, cupiditate nam.</p>
-                            </div>
-                        </div>
-
-                        <div class="post">
-                            <!--------------------------- Post do Usuario --------------------------------->
-                            <div class="divImg">
-                                <img class="imgPerfil" src="Imagens/kkkk.jpg" alt="">
-                            </div>
-                            <div>
-                                <h5>Nome...</h5>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum laborum ipsa aliquid
-                                    unde, cupiditate nam.</p>
-                            </div>
-                        </div>
-
-                        <div class="post">
-                            <!--------------------------- Post do Usuario --------------------------------->
-                            <div class="divImg">
-                                <img class="imgPerfil" src="Imagens/kkkk.jpg" alt="">
-                            </div>
-                            <div>
-                                <h5>Nome...</h5>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum laborum ipsa aliquid
-                                    unde, cupiditate nam.</p>
-                            </div>
-                        </div>
-
-                        <div class="post">
-                            <!--------------------------- Post do Usuario --------------------------------->
-                            <div class="divImg">
-                                <img class="imgPerfil" src="Imagens/kkkk.jpg" alt="">
-                            </div>
-                            <div>
-                                <h5>Nome...</h5>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum laborum ipsa aliquid
-                                    unde, cupiditate nam.</p>
-                            </div>
-                        </div>
-
-                        <div class="post">
-                            <!--------------------------- Post do Usuario --------------------------------->
-                            <div class="divImg">
-                                <img class="imgPerfil" src="Imagens/kkkk.jpg" alt="">
-                            </div>
-                            <div>
-                                <h5>Nome...</h5>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum laborum ipsa aliquid
-                                    unde, cupiditate nam.</p>
-                            </div>
-                        </div>
-
-                        <div class="post">
-                            <!--------------------------- Post do Usuario --------------------------------->
-                            <div class="divImg">
-                                <img class="imgPerfil" src="Imagens/kkkk.jpg" alt="">
-                            </div>
-                            <div>
-                                <h5>Nome...</h5>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum laborum ipsa aliquid
-                                    unde, cupiditate nam.</p>
-                            </div>
-                        </div>
+                        </article>
                     </div>
                 </main>
 
                 <!------------------------------------------------------------
                                 Area de Recomendações
-            ------------------------------------------------------------>
+                ------------------------------------------------------------>
                 <aside class="col-3">
                     <div class="container-fluid" id="areaRecomendados">
                         <h2>Recomendações</h2>
@@ -354,7 +334,7 @@
                             </div>
 
                             <div id="divHashtag">
-                                <h4 id="tituloHashtag">Hashtag mais curtido</h4>
+                                <h4 id="tituloHashtag">Hashtags mais curtido</h4>
                                 <p class="hashtag">#Rainbow6</p>
                                 <p class="hashtag">#OverWatch</p>
                                 <p class="hashtag">#Sextou</p>
@@ -364,14 +344,13 @@
                         </div>
                     </div>
                 </aside>
-
             </div>
-
 
 
 
         </section>
 
+        <script src="Js/posteOuComunidade.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
