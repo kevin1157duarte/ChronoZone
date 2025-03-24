@@ -6,29 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-    rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="Css/paginaPrincipal/conteudoPrincipal.css">
   <link rel="stylesheet" href="Css/paginaPrincipal/modal.css">
-  <link rel="stylesheet" href="Css/paginaPrincipal/paginaPrincipal.css">
+  <link rel="stylesheet" href="Css/global.css">
   <title>Fandom</title>
 </head>
 
 <body>
-  <!------------------------------------------------------------
-                      Barra de Navegação
-    ------------------------------------------------------------>
-  <nav id="barraDeBusca" class="navbar navbar-light bg-light"> <!--Configuração da Barra de Navegação-->
-    <a class="navbar-brand">ChronoZone</a>
-    <form class="form-inline mx-auto">
-      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar!</button>
-    </form>
-    <button id="btnAdicionarPost" type="button">+</button>
-    <button id="btnPerfil">
-      <img src="Imagens/Sem_Foto_Perfil_v2.jpg" alt="">
-    </button>
-  </nav>
+
+  <!--------------------------- Barra De Navegação --------------------------------->
+  <barra-nav></barra-nav>
 
   <!------------------------------------------------------------
                       Modal Perfil / modalPost
@@ -56,7 +46,7 @@
     </div>
   </dialog>
 
-    <!------------------------------------------------------------
+  <!------------------------------------------------------------
                       Seção Principal
     ------------------------------------------------------------>
   <section class="container-fluid" id="sectionPrincipal">
@@ -65,120 +55,10 @@
       <!------------------------------------------------------------
                           Menu Lateral
       ------------------------------------------------------------>
-      <aside class="col-2" id="menuLateral"> <!-- Menu Lateral-->
-        <div class="container-fluid">
-          <div id="CabecalhoMenuLatela" class="row">
-            <img id="imgCabecalho" src="Imagens/ChronoZoneIMG.jpg" alt=""><!--Imagen Menu Lateral-->
-          </div>
-          <!--------------------------- Acordeon --------------------------------->
-          <div class="row">
-            <nav class="accordion" id="accordionExample">
-              <div class="card">
-                <div class="card-header" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                      aria-expanded="true" aria-controls="collapseOne">
-                      Filmes
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                  data-parent="#accordionExample">
-                  <div class="card-body">
-                    <a href="">Lançamentos<br></a>
-                    <a href="">Dublado<br></a>
-                    <a href="">Legendado<br></a>
-                    <a href="">Genero<br></a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header" id="headingTwo">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                      data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Series
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                  <div class="card-body">
-                    <a href="">Lançamentos da Temporada<br></a>
-                    <a href="">Top 10 da Semana<br></a>
-                    <a href="">Temporadas<br></a>
-                    <a href="">Em Lançamento<br></a>
-                    <a href="">Dublado<br></a>
-                    <a href="">Legendado<br></a>
-                    <a href="">Genero<br></a>
-                    <a href="">Calendario<br></a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header" id="headingThree">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                      data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Animes
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                  <div class="card-body">
-                    <a href="">Animes da Temporada<br></a>
-                    <a href="">Top 10 da Semana<br></a>
-                    <a href="">Temporadas<br></a>
-                    <a href="">Dublado<br></a>
-                    <a href="">Legendado<br></a>
-                    <a href="">Genero<br></a>
-                    <a href="">Calendario<br></a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header" id="headingFour">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                      data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      Jogos
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                  <div class="card-body">
-                    <a href="">Em Lançamentos<br></a>
-                    <a href="">Exclusivos de Console<br></a>
-                    <a href="">Exclusivos de PC<br></a>
-                    <a href="">Indie</a>
-                    <a href="">Jogos Gratuitos<br></a>
-                    <a href="">Jogos em Promoção<br></a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header" id="headingFive">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive"
-                      aria-expanded="false" aria-controls="collapseFive">
-                      E-Sporte
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-                  <div class="card-body">
-                    <a href="">Jogos da Semana<br></a>
-                    <a href="">Noticias<br></a>
-                    <a href="">Eventos<br></a>
-                    <a href="">Campeonatos<br></a>
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </div>
-          <div>
-          </div>
-        </div>
+      <aside class="col-2" id="novoMenu">
+        <menu-lateral></menu-lateral>
       </aside>
+      
 
       <!------------------------------------------------------------
                           Conteudo Principal
@@ -196,7 +76,8 @@
               <img class="d-block w-100" src="Imagens/1337465.png" alt="Primeiro Slide">
               <h2 class="tituloCarrosel">Teste do H2 IMG 1</h2>
               <div class="paragrafoCarrosel w-50">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facere possimus laudantium aut quo quia tempora ipsa eaque, molestias a?<q></q></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facere possimus laudantium aut quo quia
+                  tempora ipsa eaque, molestias a?</p>
                 <p>----------</p>
               </div>
             </div>
@@ -230,32 +111,49 @@
         </div>
 
         <div class="row " id="areaDeNovidades">
-          
+
           <!--------------------------- COLUNA - Post da semana --------------------------------->
           <article class="col-8" id="comentariosSemanais">
             <h4>Post mais curtidos</h4>
             <!-- Post do user -->
-            <post-component nome="João Silva" imagem="Imagens/kkkk.jpg" texto="Lorem ipsum dolor sit amet." tag="#R6"></post-component>
-            <post-component nome="João Silva" imagem="Imagens/kkkk.jpg" texto="Lorem ipsum dolor sit amet." tag="#Disney, #Filme"></post-component>
-            <post-component nome="João Silva" imagem="Imagens/kkkk.jpg" texto="Lorem ipsum dolor sit amet."></post-component>
-            <post-component nome="João Silva" imagem="Imagens/kkkk.jpg" texto="Lorem ipsum dolor sit amet."></post-component> 
+            <post-component nome="João Silva" imagem="Imagens/kkkk.jpg" texto="Lorem ipsum dolor sit amet."
+              tag="#R6"></post-component>
+            <post-component nome="João Silva" imagem="Imagens/kkkk.jpg" texto="Lorem ipsum dolor sit amet."
+              tag="#Disney, #Filme"></post-component>
+            <post-component nome="João Silva" imagem="Imagens/kkkk.jpg"
+              texto="Lorem ipsum dolor sit amet."></post-component>
+            <post-component nome="João Silva" imagem="Imagens/kkkk.jpg"
+              texto="Lorem ipsum dolor sit amet."></post-component>
+            <post-component nome="João Silva" imagem="Imagens/kkkk.jpg"
+              texto="Lorem ipsum dolor sit amet."></post-component>
+            <post-component nome="João Silva" imagem="Imagens/kkkk.jpg"
+              texto="Lorem ipsum dolor sit amet."></post-component>
+            <post-component nome="João Silva" imagem="Imagens/kkkk.jpg"
+              texto="Lorem ipsum dolor sit amet."></post-component>
+            <post-component nome="João Silva" imagem="Imagens/kkkk.jpg"
+              texto="Lorem ipsum dolor sit amet."></post-component>
+
           </article>
 
           <!--------------------------- COLUNA - Recomendações de Comunidade --------------------------------->
           <article class="col-3" id="comunidadeRecomendadas">
             <h4>Comunidades Recomendadas</h4>
 
-            <post-recommend nome="Disney moscou" imagem="imagens/felipe.jpg" texto="Lorem ipsum dolor sit amet."></post-recommend>
-            <post-recommend nome="Disney moscou" imagem="imagens/felipe.jpg" texto="Lorem ipsum dolor sit amet."></post-recommend>
-            <post-recommend nome="Disney moscou" imagem="imagens/felipe.jpg" texto="Lorem ipsum dolor sit amet."></post-recommend>
-            <post-recommend nome="Disney moscou" imagem="imagens/felipe.jpg" texto="Lorem ipsum dolor sit amet."></post-recommend>
-                        
+            <post-recommend nome="Disney moscou" imagem="imagens/felipe.jpg"
+              texto="Lorem ipsum dolor sit amet."></post-recommend>
+            <post-recommend nome="Disney moscou" imagem="imagens/felipe.jpg"
+              texto="Lorem ipsum dolor sit amet."></post-recommend>
+            <post-recommend nome="Disney moscou" imagem="imagens/felipe.jpg"
+              texto="Lorem ipsum dolor sit amet."></post-recommend>
+            <post-recommend nome="Disney moscou" imagem="imagens/felipe.jpg"
+              texto="Lorem ipsum dolor sit amet."></post-recommend>
+
             <h6 id="tituloHashtag">Hashtag mais curtido</h6>
             <span class="badge rounded-pill text-bg-primary">#Rainbow6</span>
             <span class="badge rounded-pill text-bg-primary">#OverWatch</span>
             <span class="badge rounded-pill text-bg-primary">#Sextou</span>
             <span class="badge rounded-pill text-bg-primary">#Round6</span>
-            
+
           </article>
         </div>
 
@@ -264,6 +162,9 @@
 
   </section>
 
+  <script src="Js/global.js"></script>
+  <script src="Js/cardPerfil.js"></script>
+  <script src="Js/modalPost.js"></script>
   <script src="Js/componentes.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -274,8 +175,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-  <script src="Js/cardPerfil.js"></script>
-  <script src="Js/modalPost.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,135 @@
+body {
+    background-color: rgb(216, 206, 192);
+    overflow: hidden;
+}
+
+/*-------------------------- 
+    Barra de Navegação 
+----------------------------*/
+#barraDeBusca {
+    padding-inline: 0px;
+    input {
+        width: 500px;
+    }
+}
+
+#barraDeBusca img {
+    width: 45px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: contain;
+    background-color: black;
+}
+
+#btnAdicionarPost {
+    top: -3px;
+    margin-right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 30px;
+    border: none;
+    outline: none;
+}
+
+#btnAdicionarPost:hover,
+#btnAdicionarPost:focus {
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.678);
+}
+
+#btnPerfil {
+    border: 0px;
+}
+
+#logo {
+    background-color: black;
+    margin-inline: 10px;
+    padding-inline: 5px;
+    color: aliceblue;
+
+    img {
+        border-radius: 0%;
+    }
+}
+
+/*-------------------------- 
+    Menu Lateral 
+----------------------------*/
+
+#menuLateral {
+    padding: 0%;
+}
+
+#CabecalhoMenuLatela {
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+}
+
+#imgCabecalho {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#accordionExample {
+    width: 100%;
+}
+
+#botaoSobreSite {
+    height: 50;
+    margin: 15px;
+    font-size: 20px;
+}
+
+/*---------------------- novoMenu -------------------*/
+
+#novoMenu {
+    background-color: rgb(255, 255, 255);
+    height: 94vh;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+#dentroMenu {
+    background-color: rgb(255, 255, 255);
+    margin-top: -10px;
+    padding-bottom: 10px;
+
+    p {
+        margin: 2px;
+        transition: background-color 0.3s ease;
+        padding-inline: 10px;
+        border-radius: 5px;
+    }
+
+    p:hover {
+        background-color: rgba(0, 0, 0, 0.171);
+        color: blue;
+    }
+
+    h3 {
+        margin-top: 10px;
+        border-top: 3px solid rgba(0, 0, 0, 0.075);
+    }
+}
+
+#btnMenu {
+    position: absolute;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    right: -10px;
+    top: 25px;
+    border-radius: 50%;
+    border: 5px solid rgb(216, 206, 192);
+}
+
+#btnMenu:hover {
+    background-color: rgb(194, 194, 194);
+    color: aliceblue;
+}

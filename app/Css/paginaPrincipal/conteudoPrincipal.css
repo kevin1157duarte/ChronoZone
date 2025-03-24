@@ -1,6 +1,6 @@
-
-
-
+main{
+    overflow: auto;
+}
 /*-------------------------- 
         Confg. Carosel 
 ----------------------------*/
@@ -73,6 +73,9 @@
 /*-------------------------- 
     Comentarios da Semana 
 ----------------------------*/
+#areaDeNovidades{
+    height: 525px;
+}
 #comentariosSemanais {
     background-color: aliceblue;
     border-radius: 15px;
