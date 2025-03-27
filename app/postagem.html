@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postagem</title>
+  <link rel="stylesheet" href="Css/global.css">
+  <link rel="stylesheet" href="Css/paginaDoAssunto/postagem.css"> <!-- Novo CSS -->
+</head>
+<body>
+  <!-- Navbar -->
+  <barra-nav></barra-nav>
+
+  <div class="container">
+    <!-- Menu Lateral -->
+    <aside class="menu-lateral">
+      <menu-lateral></menu-lateral>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="conteudo">
+      <div class="post-card">
+        <h1 id="tituloPost"></h1>
+        <p id="textoPost"></p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let post = JSON.parse(sessionStorage.getItem("postSelecionado"));
+      if (post) {
+        document.getElementById("tituloPost").textContent = post.titulo;
+        document.getElementById("textoPost").textContent = post.texto;
+      }
+    });
+  </script>
+</body>
+</html>

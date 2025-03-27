@@ -55,3 +55,34 @@ btnconfirmarUsuario.onclick = function () {
         };
     }
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btnLogin = document.getElementById("confirmarUsuario");
+    const btnSair = document.getElementById("btnVoltar");
+    const inputUsuario = document.querySelector(".inputUsuario[type='text']");
+    const inputSenha = document.querySelector(".inputUsuario[type='password']");
+    const modal = document.getElementById("modalPerfil");
+  
+    function verificarLogin() {
+      let usuarioLogado = JSON.parse(localStorage.getItem("usuario"));
+      if (usuarioLogado) {
+        document.querySelector("barra-nav").innerHTML = `<p>Bem-vindo, ${usuarioLogado.nome}</p>`;
+      }
+    }
+  
+    btnLogin.addEventListener("click", () => {
+      let usuario = { nome: inputUsuario.value };
+      localStorage.setItem("usuario", JSON.stringify(usuario));
+      modal.classList.add("d-none");
+      verificarLogin();
+    });
+  
+    btnSair.addEventListener("click", () => {
+      localStorage.removeItem("usuario");
+      location.reload();
+    });
+  
+    verificarLogin();
+  });
+  

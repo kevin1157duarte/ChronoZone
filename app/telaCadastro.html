@@ -12,35 +12,46 @@
 </head>
 
 <body>
-
+  <!-- Barra de navegação -->
   <barra-nav></barra-nav>
-  <!------------------------------------------------------------
-                      Corpo Principal
-    ------------------------------------------------------------>
-  <section id="corpoPrincipalCadastro">
-    <h1>Tela Cadastro</h1>
-    <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Endereço de email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-          placeholder="Seu email">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputNome">Nome de usuario</label>
-        <input type="text" class="form-control" id="exampleInputNome" placeholder="Nome">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Senha</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-      </div>
-      <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Não sou Robô:</label>
-      </div>
-      <button type="button" class="btn btn-outline-secondary"><a href="index.html">Voltar</a></button>
-      <button type="submit" class="btn btn-primary" id="enviar">Enviar</button>
-    </form>
-  </section>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Menu Lateral -->
+      <aside class="col-md-3 menu-lateral">
+        <menu-lateral></menu-lateral>
+      </aside>
+      
+      <!-- Corpo Principal da Página -->
+      <main class="col-md-9">
+        <section id="corpoPrincipalCadastro">
+          <h1 class="text-center">Cadastro de Usuário</h1>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Endereço de email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputNome">Nome de usuário</label>
+              <input type="text" class="form-control" id="exampleInputNome" placeholder="Nome">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Senha</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Não sou Robô</label>
+            </div>
+            <button type="button" class="btn btn-outline-secondary">
+              <a href="index.html" style="text-decoration: none; color: inherit;">Voltar</a>
+            </button>
+            <button type="submit" class="btn btn-primary" id="enviar">Enviar</button>
+          </form>
+        </section>
+      </main>
+    </div>
+  </div>
 
   <script src="Js/componentes.js"></script>
   <script>
@@ -48,11 +59,10 @@
 
     btnEnviar.onclick = function (event) {
       event.preventDefault();
-      var email = document.querySelector('#exampleInputEmail1').value
-      var nome = document.querySelector('#exampleInputNome').value
-      var senha = document.querySelector('#exampleInputPassword1').value
-      var usuarioCadastrados = [{ nome: 'filipe123', email: 'filipe.A123@gmail.com', senha: '123', img: 'Imagens/kkkk.jpg' }]
-
+      var email = document.querySelector('#exampleInputEmail1').value;
+      var nome = document.querySelector('#exampleInputNome').value;
+      var senha = document.querySelector('#exampleInputPassword1').value;
+      var usuarioCadastrados = [{ nome: 'filipe123', email: 'filipe.A123@gmail.com', senha: '123', img: 'Imagens/kkkk.jpg' }];
 
       if (!email.includes("@")) {
         alert("Email inválido.");
@@ -69,17 +79,14 @@
         return;
       }
 
-      const dados = { email: email, nome: nome, senha: senha, img: 'Imagens/1337465.png' }
-      usuarioCadastrados.push(dados)
-      alert(`Dados salvo: ${dados.email}, ${dados.nome}, ${dados.senha} `)
+      const dados = { email: email, nome: nome, senha: senha, img: 'Imagens/1337465.png' };
+      usuarioCadastrados.push(dados);
+      alert(`Dados salvos: ${dados.email}, ${dados.nome}, ${dados.senha}`);
 
-      localStorage.setItem("dadosUsuario", JSON.stringify(usuarioCadastrados))
-      console.log(usuarioCadastrados)
+      localStorage.setItem("dadosUsuario", JSON.stringify(usuarioCadastrados));
+      console.log(usuarioCadastrados);
     }
-
-
   </script>
-
 </body>
 
 </html>

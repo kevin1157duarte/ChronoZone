@@ -108,3 +108,15 @@ class PostCompletoUsuario extends HTMLElement {
     }
 }
 customElements.define("post-completo-usuario", PostCompletoUsuario);
+
+document.addEventListener("click", (e) => {
+    if (e.target.closest("post-component")) {
+      let post = e.target.closest("post-component");
+      let titulo = post.getAttribute("tag");
+      let texto = post.getAttribute("texto");
+  
+      sessionStorage.setItem("postSelecionado", JSON.stringify({ titulo, texto }));
+      window.location.href = "postagem.html";
+    }
+  });
+  
