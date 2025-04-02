@@ -25,7 +25,7 @@ class PostRecommend extends HTMLElement {
 customElements.define("post-recommend", PostRecommend);
 
 /*-------------------------------------- 
-    Componente De Poste 
+    Componente De Poste PAGINA INDEX.HTML
 ---------------------------------------*/
 class PostComponent extends HTMLElement {
     connectedCallback() {
@@ -51,6 +51,36 @@ class PostComponent extends HTMLElement {
 customElements.define("post-component", PostComponent);
 
 /*-------------------------------------- 
+    Componente De Poste PAGINA SEGUNDARIA
+---------------------------------------*/
+class PostComponentSeg extends HTMLElement {
+    connectedCallback() {
+        const nome = this.getAttribute("nome");
+        const imagem = this.getAttribute("imagem");
+        const texto = this.getAttribute("texto");
+
+        this.innerHTML = `
+    <div class="post">
+        <div class="divImg">
+            <img class="imgPerfil rounded-circle" src="${imagem}" alt="${nome}">
+        </div>
+        <div>
+            <h5>${nome}</h5>
+            <p>${texto}</p>
+            <div class="divBtnInteracao">
+                99 mil<img src="Imagens/imgLike.svg" class="BtnInteragir" alt="">
+                <button type="button" class="btn-outline-primary BtnInteragir">Curtir</button>
+                <button type="button" class="btn-outline-primary BtnInteragir">Compartilhar</button>
+                <button type="button" class="btn-outline-danger BtnInteragir">Denuciar</button>
+            </div>
+        </div>
+    </div>
+        `;
+    }
+}
+customElements.define("post-component-seg", PostComponentSeg);
+
+/*-------------------------------------- 
     Componente De Poste Grande 
 ---------------------------------------*/
 class PostCompletoUsuario extends HTMLElement {
@@ -60,9 +90,9 @@ class PostCompletoUsuario extends HTMLElement {
         const video = this.getAttribute("video");
         const texto = this.getAttribute("texto");
         const yt = this.getAttribute("YouTube");
-        const ytTitulo = this.getAttribute("Titulo do YouTube"); 
+        const ytTitulo = this.getAttribute("Titulo do YouTube");
 
-        if(yt === null){
+        if (yt === null) {
             this.innerHTML = `
                 <div class="row postComunidade">
                     <div class="col-3">
@@ -84,7 +114,7 @@ class PostCompletoUsuario extends HTMLElement {
                                 </div>
                             </div>                               
                         </div>`;
-        }else{
+        } else {
             this.innerHTML = `<div class="row postComunidade">
                                 <div class="col-3">
                                     <iframe id="iframePost" src="${yt}"
@@ -111,12 +141,11 @@ customElements.define("post-completo-usuario", PostCompletoUsuario);
 
 document.addEventListener("click", (e) => {
     if (e.target.closest("post-component")) {
-      let post = e.target.closest("post-component");
-      let titulo = post.getAttribute("tag");
-      let texto = post.getAttribute("texto");
-  
-      sessionStorage.setItem("postSelecionado", JSON.stringify({ titulo, texto }));
-      window.location.href = "postagem.html";
+        let post = e.target.closest("post-component");
+        let titulo = post.getAttribute("tag");
+        let texto = post.getAttribute("texto");
+
+        sessionStorage.setItem("postSelecionado", JSON.stringify({ titulo, texto }));
+        window.location.href = "postagem.html";
     }
-  });
-  
+});
