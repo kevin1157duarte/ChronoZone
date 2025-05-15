@@ -64,12 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const inputSenha = document.querySelector(".inputUsuario[type='password']");
     const modal = document.getElementById("modalPerfil");
   
-    /*function verificarLogin() {
+    function verificarLogin() {
       let usuarioLogado = JSON.parse(localStorage.getItem("usuario"));
       if (usuarioLogado) {
         document.querySelector("barra-nav").innerHTML = `<p>Bem-vindo, ${usuarioLogado.nome}</p>`;
       }
-    }*/
+    }
   
     btnLogin.addEventListener("click", () => {
       let usuario = { nome: inputUsuario.value };
@@ -83,6 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
       location.reload();
     });
   
-    /*verificarLogin();*/
+    verificarLogin();
   });
   

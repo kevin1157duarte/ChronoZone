@@ -97,7 +97,7 @@ class MenuLateral extends HTMLElement {
           <p data-tipo="21">Campeonatos</p>
 
           <h3><span class="material-icons" style="margin-inline: 10px;">info</span>Sobre</h3>
-          <p><a href="./about.html">Historia do Site</p>
+          <p>Historia do Site</p>
           <p>Direitos Reservados</p>
         </div>
       `;
@@ -128,12 +128,8 @@ class MenuLateral extends HTMLElement {
     }
   }
   handleClick(event) {
-    const pagina = event.target.getAttribute('data-tipo');
-    const texto = event.target.textContent || event.target.innerText;
-    console.log(`Página: ${pagina}, Texto: ${texto}`);
-
-    location.href = `./telaDePost.html?pagina=${pagina}&categoria=${encodeURIComponent(texto)}`;
+    const catalogo = event.target.getAttribute('data-tipo');
+    location.href = `./telaDePost${catalogo}.html`;
   }
-
 }
 customElements.define("menu-lateral", MenuLateral)
