@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Visualizar Post</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+    }
+
+    .sidebar {
+      background-color: #1e1e1e;
+      padding: 1rem;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      overflow-y: auto;
+    }
+
+    .main-content {
+      margin-left: 270px;
+      padding: 2rem;
+    }
+
+    .post-card {
+      background-color: #1e1e1e;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .post-card h1 {
+      font-size: 2rem;
+      color: #00bcd4;
+    }
+
+    .btn-like {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .btn-like .material-icons {
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+
+    .btn-like.liked .material-icons {
+      color: red;
+    }
+
+    .form-control, .form-control:focus {
+      background-color: #2c2c2c;
+      color: white;
+      border: none;
+    }
+
+    .comment {
+      border-bottom: 1px solid #333;
+      padding: 0.5rem 0;
+    }
+
+    .nav-link {
+      color: white;
+    }
+
+    .nav-link:hover {
+      color: #00bcd4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h5 class="text-center text-light">Gêneros</h5>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link" href="postagem.html?genero=Filmes">🎬 Filmes</a></li>
+      <li class="nav-item"><a class="nav-link" href="postagem.html?genero=Séries">📺 Séries</a></li>
+      <li class="nav-item"><a class="nav-link" href="postagem.html?genero=Jogos">🎮 Jogos</a></li>
+      <li class="nav-item"><a class="nav-link" href="postagem.html?genero=Desenhos">🧸 Desenhos</a></li>
+      <li class="nav-item"><a class="nav-link" href="postagem.html?genero=Animes">📚 Animes</a></li>
+      <li class="nav-item"><a class="nav-link" href="postagem.html?genero=Super-heróis">🦸‍♂️ Super-heróis</a></li>
+    </ul>
+  </div>
+
+  <!-- Conteúdo -->
+  <div class="main-content">
+    <a href="javascript:history.back()" class="btn btn-outline-light mb-3">← Voltar</a>
+
+    <div class="post-card mb-4" id="postContent">
+      <h1 id="postTitulo">Carregando título...</h1>
+      <p id="postTexto">Carregando conteúdo...</p>
+      <small id="postAutor" class="text-muted d-block mb-3">Por ...</small>
+
+      <button id="btnCurtir" class="btn-like">
+        <span class="material-icons">favorite</span>
+        Curtir (<span id="qtdCurtidas">0</span>)
+      </button>
+    </div>
+
+    <div class="card p-4 bg-black">
+      <h5>Comentários</h5>
+      <form id="formComentario" class="mb-3">
+        <textarea class="form-control mb-2" id="comentarioTexto" rows="3" placeholder="Escreva um comentário..."></textarea>
+        <button class="btn btn-primary btn-sm" type="submit">Comentar</button>
+      </form>
+      <div id="comentariosArea"></div>
+    </div>
+  </div>
+
+  <script>
+    const post = JSON.parse(sessionStorage.getItem("postSelecionado"));
+    const curtidasKey = `curtidas_${post?.id || post?.titulo}`;
+    const comentariosKey = `comentarios_${post?.id || post?.titulo}`;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      if (!post) {
+        document.getElementById("postContent").innerHTML = "<p class='text-muted'>Post não encontrado.</p>";
+        return;
+      }
+
+      // Render post
+      document.getElementById("postTitulo").textContent = post.titulo;
+      document.getElementById("postTexto").textContent = post.texto;
+      document.getElementById("postAutor").textContent = `Por ${post.autor} em ${post.data}`;
+
+      // Curtidas
+      let curtidas = parseInt(localStorage.getItem(curtidasKey)) || 0;
+      const btnCurtir = document.getElementById("btnCurtir");
+      const qtdCurtidas = document.getElementById("qtdCurtidas");
+      qtdCurtidas.textContent = curtidas;
+
+      btnCurtir.addEventListener("click", () => {
+        curtidas++;
+        localStorage.setItem(curtidasKey, curtidas);
+        qtdCurtidas.textContent = curtidas;
+        btnCurtir.classList.add("liked");
+      });
+
+      // Comentários
+      const comentarios = JSON.parse(localStorage.getItem(comentariosKey)) || [];
+      const comentariosArea = document.getElementById("comentariosArea");
+
+      const renderComentarios = () => {
+        comentariosArea.innerHTML = "";
+        comentarios.forEach(c => {
+          const div = document.createElement("div");
+          div.className = "comment";
+          div.innerHTML = `<strong>${c.autor}:</strong> <p>${c.texto}</p>`;
+          comentariosArea.appendChild(div);
+        });
+      };
+
+      renderComentarios();
+
+      document.getElementById("formComentario").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const input = document.getElementById("comentarioTexto");
+        const texto = input.value.trim();
+        const usuario = JSON.parse(sessionStorage.getItem("usuarioLogado"));
+
+        if (texto && usuario) {
+          comentarios.push({ autor: usuario.nome, texto });
+          localStorage.setItem(comentariosKey, JSON.stringify(comentarios));
+          input.value = "";
+          renderComentarios();
+        } else {
+          alert("Você precisa estar logado e digitar algo para comentar.");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

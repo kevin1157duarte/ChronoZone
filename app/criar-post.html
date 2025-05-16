@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Criar Postagem</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      padding: 2rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .form-container {
+      background-color: #1e1e1e;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+    }
+    label {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Criar nova postagem</h2>
+    <form id="formPost">
+      <div class="mb-3">
+        <label for="titulo" class="form-label">Título</label>
+        <input type="text" id="titulo" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="texto" class="form-label">Texto</label>
+        <textarea id="texto" class="form-control" rows="4" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="genero" class="form-label">Gênero</label>
+        <select id="genero" class="form-select" required>
+          <option value="">Selecione</option>
+          <option value="Filmes">Filmes</option>
+          <option value="Séries">Séries</option>
+          <option value="Jogos">Jogos</option>
+          <option value="Desenhos">Desenhos</option>
+          <option value="Animes">Animes</option>
+          <option value="Super-heróis">Super-heróis</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-success mt-3">Publicar</button>
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const usuario = JSON.parse(sessionStorage.getItem("usuarioLogado"));
+      if (!usuario) {
+        alert("Você precisa estar logado para criar uma postagem.");
+        window.location.href = "index.html";
+        return;
+      }
+
+      const form = document.getElementById("formPost");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const titulo = document.getElementById("titulo").value.trim();
+        const texto = document.getElementById("texto").value.trim();
+        const genero = document.getElementById("genero").value;
+
+        const novoPost = {
+          titulo,
+          texto,
+          genero,
+          autor: usuario.nome,
+          data: new Date().toLocaleString()
+        };
+
+        const postsSalvos = JSON.parse(localStorage.getItem("postagens")) || [];
+        postsSalvos.push(novoPost);
+        localStorage.setItem("postagens", JSON.stringify(postsSalvos));
+
+        alert("Post publicado com sucesso!");
+        window.location.href = `postagem.html?genero=${encodeURIComponent(genero)}`;
+      });
+    });
+  </script>
+</body>
+</html>

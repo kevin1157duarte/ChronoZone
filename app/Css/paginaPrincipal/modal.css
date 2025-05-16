@@ -1,6 +1,13 @@
 /*-------------------------- 
         modal do Perfil 
 ----------------------------*/
+
+
+body {
+    background-color: #121212;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
 .modalPerfil {
     text-align: center;
     display: grid;
