@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="Js/autenticacao.js"></script>
+  <link rel="stylesheet" href="Css/SuporteAoUsuario/telaCadastro.css">
+  <link rel="stylesheet" href="Css/global.css">
+  <title>Fandom - Cadastro</title>
+</head>
+
+<body>
+  <!-- Barra de navegação -->
+  <barra-nav></barra-nav>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Menu Lateral -->
+      <aside class="col-md-3 menu-lateral">
+        <menu-lateral></menu-lateral>
+      </aside>
+      
+      <!-- Corpo Principal da Página -->
+      <main class="col-md-9">
+        <section id="corpoPrincipalCadastro">
+          <h1 class="text-center">Cadastro de Usuário</h1>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Endereço de email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputNome">Nome de usuário</label>
+              <input type="text" class="form-control" id="exampleInputNome" placeholder="Nome">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Senha</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Não sou Robô</label>
+            </div>
+            <button type="button" class="btn btn-outline-secondary">
+              <a href="index.html" style="text-decoration: none; color: inherit;">Voltar</a>
+            </button>
+            <button type="submit" class="btn btn-primary" id="enviar">Enviar</button>
+          </form>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="Js/componentes.js"></script>
+  <script>
+    var btnEnviar = document.querySelector('#enviar')
+
+    btnEnviar.onclick = function (event) {
+      event.preventDefault();
+      var email = document.querySelector('#exampleInputEmail1').value;
+      var nome = document.querySelector('#exampleInputNome').value;
+      var senha = document.querySelector('#exampleInputPassword1').value;
+      var usuarioCadastrados = [{ nome: 'filipe123', email: 'filipe.A123@gmail.com', senha: '123', img: 'Imagens/kkkk.jpg' }];
+
+      if (!email.includes("@")) {
+        alert("Email inválido.");
+        return;
+      }
+
+      if (nome.length < 3) {
+        alert("Nome deve ter pelo menos 3 caracteres.");
+        return;
+      }
+
+      if (senha.length < 3) {
+        alert("Senha deve ter pelo menos 3 caracteres.");
+        return;
+      }
+
+      const dados = { email: email, nome: nome, senha: senha, img: 'Imagens/1337465.png' };
+      usuarioCadastrados.push(dados);
+      alert(`Dados salvos: ${dados.email}, ${dados.nome}, ${dados.senha}`);
+
+      localStorage.setItem("dadosUsuario", JSON.stringify(usuarioCadastrados));
+      console.log(usuarioCadastrados);
+    }
+  </script>
+</body>
+
+</html>
